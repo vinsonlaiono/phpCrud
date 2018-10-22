@@ -20,10 +20,10 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="text-center">To Do List:</h1>
+        <h1 class="text-center">To Do List</h1>
         <div class="col-md-10 col-md-offset-5"></div>
         <button type="button" class="btn btn-success mb-2" data-toggle="modal" data-target="#exampleModal">Add a task</button>
-        <button type="button" class="btn btn-default mb-2 float-right">Print</button>
+        <button type="button" class="btn btn-default mb-2 float-right" onclick="print()">Print</button>
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -50,11 +50,21 @@
                 </div>
             </div>
         </div>
+
+        <div class="col-md-12 text-center">
+            <form action="search.php" method="post" class="form-group">
+                <h5>Search</h5>
+                <input type="text" placeholder="Search for task" name="search" class="form-control">
+            </form>
+        </div>
+
         <table class="table">
         <thead>
             <tr>
                 <th scope="col">No.</th>
                 <th scope="col">Task</th>
+                <th scope="col"></th>
+                <th scope="col">Completed</th>
             </tr>
         </thead>
         <tbody>

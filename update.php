@@ -48,6 +48,7 @@
                 <form method="post">
                     <input type="text" class="form-control" name="task" value="<?php echo $task['name'];?>">
                     <input type="submit" class="btn btn-primary mt-2" name="submit" value="Update">
+                    <a href="index.php" class="btn btn-secondary mt-2">Cancel</a>
                 </form>
             </div>
     </div>
